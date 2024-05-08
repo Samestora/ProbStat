@@ -4,35 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histogram Data Kategori</title>
-    <style>
-        .input {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #table {
-            align-items: center;
-            padding: 10px;
-        }
-        #data_raw {
-            min-width: 60em;
-            max-width: 60em;
-            min-height: 10em;
-            max-height: 15em;
-        }
-        #btn {
-            color: black;
-            border: 2px solid #04AA6D; /* Green */
-            cursor: pointer;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="input">
-            <textarea autofocus oninput="validation(this)" id="data_raw" placeholder="Separate with spaces"></textarea> 
-        </div>
+    <div class="input">
+        <textarea autofocus oninput="validation(this)" id="data_raw" placeholder="Separate with spaces"></textarea> 
+        <input type="button" id="btn" value="Display">
+    </div>
+    <div class="result-text">
         <table border="1" id="table">
             <thead>
                 <tr>
@@ -42,55 +22,10 @@
                 </tr>
             </thead>
             <tbody id="tableBody">
+                <!--Buat hasil frekuensi sama kelas-->
             </tbody>
         </table>
-        <input type="button" id="btn" value="Display">
     </div>
-
-    <script>
-        // Validasi
-        function validation(elem) {
-            const value = elem.value;
-            const numVal = value.replace(/[^\d\n]+/g, " ");
-            elem.value = numVal;
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const raw_strings = document.getElementById('data_raw');
-            const button = document.getElementById('btn');
-            const tableBody = document.getElementById('tableBody');
-
-            button.addEventListener('click', function () {
-                tableBody.innerHTML = ''; // Clear previous data
-                const data = raw_strings.value.split(" ").map(Number).sort((a, b) => a - b); // Convert to numbers and sort
-                const class_number = Math.round(Math.sqrt(data.length));
-                const interval = data.length === 1 || data[data.length - 1] === data[0] ? data[0] : Math.round((data[data.length - 1] - data[0]) / class_number);
-
-                let class_read = 0;
-                let number = 1;
-
-                for (let show_all = 0; show_all < class_number; show_all++) {
-                    let frequency = 0;
-
-                    for (let j = class_read; j < class_read + interval; j++) {
-                        if (data.includes(j)) {
-                            frequency++;
-                        }
-                    }
-
-                    class_read += interval;
-
-                    const template = `
-                        <tr>
-                            <td scope="row">${number}</td>
-                            <td>${class_read}</td>
-                            <td>${frequency}</td>
-                        </tr>`;
-                    tableBody.innerHTML += template;
-                    number++;
-                }
-            });
-        });
-    </script>
 </body>
+<script src="script.js"></script>
 </html>
