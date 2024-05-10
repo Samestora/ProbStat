@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histogram Data Kategori</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="input">
-        <textarea autofocus oninput="validation(this)" id="data_raw" placeholder="Separate with spaces"></textarea> 
+        <textarea autofocus oninput="validation(this)" id="inputArea" placeholder="Separate with spaces"></textarea> 
         <input type="button" id="btn" value="Display">
     </div>
-    <div class="result-text">
-        <table border="1" id="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Kelas</th>
-                    <th>Frekuensi</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <!--Buat hasil frekuensi sama kelas-->
-            </tbody>
+    <div class="tableContainer">
+        <table id="frequencyTable">
+            <!--Buat hasil frekuensi sama kelas-->
         </table>
+
+        <table id="moreinfoTable">
+                <!-- Buat hasil tambahan kayak mean, interval, bla bla bla -->
+        </table>
+
+        <div class="graph">
+            histogram here
+            <svg id="histogram"></svg>
+        </div>
     </div>
+
 </body>
-<script src="script.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/histogram.js"></script>
+
 </html>

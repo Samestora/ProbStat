@@ -1,0 +1,53 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputArea {
+    min-width: 60em;
+    max-width: 60em;
+    min-height: 10em;
+    max-height: 15em;
+}
+
+#btn {
+    color: black;
+    border: 2px solid #04AA6D; /* Green */
+    cursor: pointer;
+    margin: 10px;
+}
+
+.tableContainer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: normal;
+}
+
+#frequencyTable{
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-right: 10px;
+}
+#moreinfoTable{
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    margin: 20px;
+}
+th{
+    padding-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+td{
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    border: 1px solid;
+}
