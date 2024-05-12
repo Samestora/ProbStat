@@ -1,3 +1,4 @@
+/* Input Area */
 .input {
     display: flex;
     flex-direction: column;
@@ -18,26 +19,24 @@
     margin: 10px;
 }
 
-.tableContainer{
-    margin-top: 10px;
+/* Output Area */
+.output {
+    margin-top: 10vh;
+    position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: normal;
+    min-height: 100vh; /* Ensure the container covers the entire viewport height */
+    flex: 1; /* Let the table container grow to fill available space */
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
 }
 
-#frequencyTable{
+#frequencyTable, #moreinfoTable {
     padding: 8px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
     margin-right: 10px;
-}
-#moreinfoTable{
-    padding: 8px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal; 
-    margin: 20px;
+    border: 1px solid #ccc; /* Add border for visualization */
 }
 th{
     padding-bottom: 8px;
@@ -50,4 +49,17 @@ td{
     font-weight: 300;
     font-style: normal;
     border: 1px solid;
+}
+
+/* Histogram Part! */
+.histogramContainer {
+    margin-left: 1px; /* Add margin to separate it from the table */   
+    background-color: gainsboro;
+    min-height: 50vh;
+    display: flex;
+    transform: scaleY(-1);
+}
+.bar {
+    display: inline-block;
+    width: 20px; /* Width of each bar */
 }

@@ -12,21 +12,27 @@
         <textarea autofocus oninput="validation(this)" id="inputArea" placeholder="Separate with spaces"></textarea> 
         <input type="button" id="btn" value="Display">
     </div>
-    <div class="tableContainer">
+    <div class="output">
         <table id="frequencyTable">
             <!--Buat hasil frekuensi sama kelas-->
         </table>
-
         <table id="moreinfoTable">
                 <!-- Buat hasil tambahan kayak mean, interval, bla bla bla -->
         </table>
-
-        <div class="graph">
-            histogram here
-            <svg id="histogram"></svg>
+        <div class="histogramContainer">
+            <!-- Height of the bar represents the frequency -->
+            
+            <div class="bar" style="height: 150px;"></div>
+            <div class="bar" style="height: 80px;"></div>
+            <div class="bar" style="height: 200px;"></div>
+            <div class="bar" style="height: 120px;"></div>
+            <div class="bar" style="height: 100px;"></div>
+            <div class="bar" style="height: 150px;"></div>
+            <div class="bar" style="height: 80px;"></div>
+            <div class="bar" style="height: 200px;"></div>
+            <div class="bar" style="height: 120px;"></div>
         </div>
     </div>
-
 </body>
 
 <script src="js/script.js"></script>
