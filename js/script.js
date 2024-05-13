@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let class_read_bottom = 0;
 
         // get class frequency
-        for (let show_all = 0; show_all < class_number; show_all++) {
+        for (let show_all = 0; show_all < Math.round(class_number); show_all++) {
             let frequency = 0;
             for (let j = class_read; j < class_read + interval; j++) {
                 if (data.includes(j)) {
@@ -70,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
             if (class_read === 0){class_read = 1}
             const template = `
                 <tr>
-                    <td scope="row">${number}</td>
-                    <td>${class_read_bottom}-${class_read - 1}</td>
-                    <td>${frequency}</td>
+                    <td id=n${number}> ${number} </td>
+                    <td id=r${number}> ${class_read_bottom}-${class_read - 1} </td>
+                    <td id=f${number}> ${frequency} </td>
                 </tr>`;
 
             frequencyBody.innerHTML += template;
-            number++; // number will be +1 at the end... be cautious!
+            number++;
             class_read_bottom = class_read;
         }
         // get mean for moreinfo
@@ -97,29 +97,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 </tr>
                 <tr>
                     <td>Nilai terkecil</td>
-                    <td>${Math.min(...data)}</td>
+                    <td id=min-val>${Math.min(...data)}</td>
                 </tr>
                 <tr>
                     <td>Nilai terbesar</td>
-                    <td>${Math.max(...data)}</td>
+                    <td id=max-val>${Math.max(...data)}</td>
                 </tr>
                 <tr>
                     <td>Range kelas</td>
-                    <td>${interval}</td>
+                    <td id=class-range>${interval}</td>
                 </tr>
                 <tr>
                     <td>Jumlah kelas</td>
-                    <td>${number-1}</td>
+                    <td id=class-total>${number-1}</td>
                 </tr>
                 <tr>
                     <td>Kelas terkecil</td>
-                    <td>0</td>
+                    <td id=class-min>0</td>
                 </tr>
                 <tr>
                     <td>Kelas terbesar</td>
-                    <td>${class_read-1}</td>
+                    <td id=class-max>${class_read-1}</td>
                 </tr>
-            </tbody>
-        `
+            </tbody>`;
+        
+        const colours = ['#377eb8', '#ff7f00', '#4daf4a','#f781bf', '#a65628', '#984ea3','#999999', '#e41a1c', '#dede00'];
+        const svg = document.getElementById('svg-bar');
+        let gajelas = "";
+        svg.innerHTML = '';
+        for (let bars = 1; bars <= class_number; bars++){
+            gajelas = 'f' + bars;
+            svg.innerHTML += `<rect width="20" height="${parseInt(document.getElementById(gajelas).textContent)*20}" x="${20*(bars-1)}" y="0" style="fill:${colours[bars % colours.length]};" />`;
+        }
     });
 });

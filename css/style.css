@@ -35,7 +35,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    margin-right: 10px;
+    margin-left: 25px;
     border: 1px solid #ccc; /* Add border for visualization */
 }
 th{
@@ -53,13 +53,8 @@ td{
 
 /* Histogram Part! */
 .histogramContainer {
-    margin-left: 1px; /* Add margin to separate it from the table */   
-    background-color: gainsboro;
-    min-height: 50vh;
+    margin-left: 50px; /* Add margin to separate it from the table */
+    min-height: 25vh;
     display: flex;
     transform: scaleY(-1);
-}
-.bar {
-    display: inline-block;
-    width: 20px; /* Width of each bar */
 }
