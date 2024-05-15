@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Colorful
         const colours = ['#FBA834', '#333A73', '#387ADF','#50C4ED','#FC4100','#FFC55A','#00215E','#2C4E80'];
         // X-Axis
-        svg.innerHTML += `<line x1="17.5" y1="460px" x2="800px" y2="460px" style="stroke:#000000;stroke-width:1px" />`;
+        svg.innerHTML += `<line x1="40" y1="460px" x2="800px" y2="460px" style="stroke:#000000;stroke-width:1px" />`;
         // Y-Axis
-        svg.innerHTML += `<line x1="18" y1="0" x2="18" y2="460px" style="stroke:#000000;stroke-width:1px" />`;
+        svg.innerHTML += `<line x1="40" y1="0" x2="40" y2="460px" style="stroke:#000000;stroke-width:1px" />`;
 
         // Draw bars
         let frequency_reader;
@@ -141,12 +141,12 @@ document.addEventListener('DOMContentLoaded', function () {
             frequency_reader = parseInt(document.getElementById(frequency_reader).textContent);
             if (frequency_reader === max_freq){
                 y_offset = 457-460;
-                svg.innerHTML += `<rect width="40px" height="460px" x="${(19+40*(bars))}px" y="${y_offset+2.5}px" style="fill:${colours[bars % colours.length]};" />`;    
+                svg.innerHTML += `<rect width="40px" height="460px" x="${(41+40*(bars))}px" y="${y_offset+2.5}px" style="fill:${colours[bars % colours.length]};" />`;    
             }else{
                 frequency_reader = frequency_reader / max_freq;
                 bar_height = Math.round(457 * frequency_reader);
                 y_offset = 457 - bar_height;
-                svg.innerHTML += `<rect width="40px" height="${bar_height}px" x="${(19+40*(bars))}px" y="${y_offset + 2}px" style="fill:${colours[bars % colours.length]};" />`;
+                svg.innerHTML += `<rect width="40px" height="${bar_height}px" x="${(41+40*(bars))}px" y="${y_offset + 2}px" style="fill:${colours[bars % colours.length]};" />`;
             }
         }
 
@@ -155,17 +155,17 @@ document.addEventListener('DOMContentLoaded', function () {
         let label_x = [];
 
         // X AXIS Label
-        svg.innerHTML += `<text y="490px" text-anchor="middle" font-size="15" x="15px">0</text>`;
+        svg.innerHTML += `<text y="490px" text-anchor="middle" font-size="15" x="35px">0</text>`;
         for (let text = 1; text <= class_number; text++){
             class_reader = 'r' + (text);
             label_x = (document.getElementById(class_reader).textContent).split("-").map(Number);
-            svg.innerHTML += `<text y="490px" text-anchor="middle" font-size="15" x="${40*(text)+20}px">${label_x[1]}</text>`;
+            svg.innerHTML += `<text y="490px" text-anchor="middle" font-size="15" x="${41*(text)+35}px">${label_x[1]}</text>`;
         }
         // Y AXIS Label
-        svg.innerHTML += `<text y="19px" text-anchor="middle" font-size="15" x="8px">${max_freq}</text>`;
-        svg.innerHTML += `<text y="114px" text-anchor="middle" font-size="15" x="8px">${Math.round(max_freq * 0.75)}</text>`;
-        svg.innerHTML += `<text y="224px" text-anchor="middle" font-size="15" x="8px">${max_freq * 0.5}</text>`;
-        svg.innerHTML += `<text y="334px" text-anchor="middle" font-size="15" x="8px">${Math.round(max_freq*0.25)}</text>`;
-        svg.innerHTML += `<text y="460px" text-anchor="middle" font-size="15" x="8px">0</text>`;
+        svg.innerHTML += `<text y="19px" text-anchor="middle" font-size="15" x="20px">${max_freq}</text>`;
+        svg.innerHTML += `<text y="114px" text-anchor="middle" font-size="15" x="20px">${(max_freq * 0.75).toFixed(1)}</text>`;
+        svg.innerHTML += `<text y="224px" text-anchor="middle" font-size="15" x="20px">${max_freq * 0.5}</text>`;
+        svg.innerHTML += `<text y="334px" text-anchor="middle" font-size="15" x="20px">${(max_freq*0.25).toFixed(1)}</text>`;
+        svg.innerHTML += `<text y="460px" text-anchor="middle" font-size="15" x="20px">0</text>`;
     });
 });
