@@ -54,7 +54,7 @@ td{
 /* Histogram Part! */
 .histogramContainer {
     margin-left: 50px; /* Add margin to separate it from the table */
-    min-height: 25vh;
+    min-height: 500px;
+    min-width: 800px;
     display: flex;
-    transform: scaleY(-1);
 }
