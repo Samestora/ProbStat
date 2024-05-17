@@ -29,22 +29,16 @@
             <li>c. Batang atau Balok: Tinggi batang atau balok menunjukkan frekuensi atau jumlah observasi dalam kategori tersebut.</li>
         </ol></h5>
     </section>
-
-    <div class="input">
-        <input type="text" autofocus id="inputLabel" placeholder="ex : Jeruk, Volvo" >
-        <input type="number" id="inputValue" min="0" placeholder="ex : 3">
-        <div class="buttons">
-            <input type="button" id="btnAdd" value="Add">
+    
+    <div id="mainContainer">
+        <div id="inputArea">
+            Label: <input type="text" id="lbl">
+            Value: <input type="number" id="val">
+            <button onclick="addVal()" id="btnAdd">Add Value</button>
         </div>
-    </div>
-    <div class="output">
-        <div id="dataList">
-            <!--Buat hasil frekuensi sama kelas-->
-        </div>
-        <div class="histogramContainer">
-            <svg id="svg-bar" xmlns="http://www.w3.org/2000/svg" height='500px' width="800px">
-                <!-- Height of the bar represents the frequency -->
-            </svg>
+        <div id="outputArea">
+            <svg id="chart"></svg>
+            <div id="lgnd"></div>
         </div>
     </div>
 </body>
