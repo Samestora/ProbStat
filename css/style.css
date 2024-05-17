@@ -1,8 +1,33 @@
+
+/* Header  */
+header {
+    background: linear-gradient(to right, #161616, #07295f);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.889);
+    margin: 0;
+}
+
+.logo {
+    height: 90px;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to right, #161616,  #07295f);
+}
 /* Input Area */
 .input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px; 
 }
 
 #inputArea {
@@ -13,11 +38,48 @@
 }
 
 #btn {
-    color: black;
+    color: rgb(0, 0, 0);
     border: 2px solid #04AA6D; /* Green */
     cursor: pointer;
     margin: 10px;
 }
+/* Penjelasan */
+
+.intro {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin-top: 30px; 
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #b1acac; /* Warna putih */
+    text-align: left;
+    width: 60%;
+    margin: 0 auto 10px auto; /* Membuat h2 berada di tengah dan memiliki margin bawah */
+    padding-left: 0; /* Menghapus padding kiri */
+}
+
+.intro hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #07295f, #b1acac); /* Warna garis */
+    margin: 10px auto;
+    width: 60%;
+}
+
+.intro h5 {
+    font-size: 1em;
+    color: #b1acac;
+    width: 60%;
+    margin: 0 auto; /* Membuat margin otomatis untuk membuat h5 berada di tengah */
+    text-align: left; /* Jika teks di dalam h5 ingin disejajarkan ke kiri */
+    line-height: 1.5; 
+}
+
+
 
 /* Output Area */
 .output {
@@ -27,7 +89,7 @@
     min-height: 100vh; /* Ensure the container covers the entire viewport height */
     flex: 1; /* Let the table container grow to fill available space */
     display: flex;
-    align-items: flex-start; /* Align items at the start */
+    align-items: flex-start;  /*Align items at the start */
 }
 
 #frequencyTable, #moreinfoTable {
@@ -36,19 +98,23 @@
     font-weight: 300;
     font-style: normal;
     margin-left: 25px;
-    border: 1px solid #ccc; /* Add border for visualization */
+    border: 1px solid #f8ecec; /* Add border for visualization */
 }
+
+
 th{
     padding-bottom: 8px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
+    color: white;
 }
 td{
+    color: white;
     padding: 8px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    border: 1px solid;
+    border: 1px solid white;
 }
 
 /* Histogram Part! */
@@ -57,4 +123,166 @@ td{
     min-height: 500px;
     min-width: 800px;
     display: flex;
+}
+
+
+
+
+/*percobaan*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border;
+    font-family:'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.banner{
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} /* supaya header diatas */
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(1, 0, 5, 0.3),rgba(4, 1, 17, 0.3));
+
+
+
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color:rgb(13, 13, 93);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 70px;
+    margin: 2vh;
+    margin-left: 8%;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.navbar{
+    display: flex;
+    margin-right: 4vh;
+}
+
+@keyframes kelapKelip {
+    0% {
+        background: white;
+        color: black;
+    }
+    50% {
+        background: black;
+        color: white;
+    }
+    100% {
+        background: white;
+        color: black;
+    }
+}
+
+.navbar a {
+    animation: kelapKelip 1s infinite;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+}
+
+
+.navbar a:hover, .navbar a.active {
+    animation: kelapKelip 1s infinite;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+}
+
+
+.navbar a{
+    color: white;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;   
+    text-decoration: none;
+    transition: ease 0.40s;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+.title{
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+    padding: 14px 17px;
+    margin-top: 32vh;
+    text-align: center;
+    vertical-align: center;
+}
+
+.title h1{
+    font-size: 10vh;
+    text-shadow: 2px black;
+    transition: ease 0.3s;
+}
+
+.title h1:hover{
+    color:transparent;
+    -webkit-text-stroke: 1px white;
+    
+} /* buat h1 nya berubah ubah */
+
+.button{
+    display: inline-block;
+    margin-top:5vh;
+    font-size: 25px;
+    padding: 10px 30px;
+    color:rgb(56, 42, 165);
+    /* background-color:rgb(164, 44, 44); */
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: ease 0.30s;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(56, 42, 165);
+    /* border: 2px solid rgb(42, 37, 68); */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
 }
