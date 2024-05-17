@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Data Kategori</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./files/logo.png" alt="Logo" class="logo">
+        <h1>Histogram (Data Kategori)</h1>
+    </header>
+
+    <section class="intro">
+        <h2>Definisi Histogram</h2>
+        <hr>
+        <h5>Histogram adalah grafik batang yang menunjukkan distribusi frekuensi data yang telah dikelompokkan ke dalam beberapa kategori atau kelas. 
+            Histogram digunakan untuk menampilkan data kualitatif atau data kategori.</h5>
+    </section>
+
+    <section class="intro">
+        <h2>Komponen Histogram</h2>
+        <hr>
+        <h5><ol>
+            <li>a. Sumbu Horizontal (Sumbu X): Sumbu ini menunjukkan kategori atau kelompok data yang berbeda.</li>
+            <li>b. Sumbu Vertikal (Sumbu Y): Sumbu ini menunjukkan frekuensi atau jumlah observasi dalam setiap kategori.</li>
+            <li>c. Batang atau Balok: Tinggi batang atau balok menunjukkan frekuensi atau jumlah observasi dalam kategori tersebut.</li>
+        </ol></h5>
+    </section>
+
+    <div class="input">
+        <input type="text" autofocus id="inputLabel" placeholder="ex : Jeruk, Volvo" >
+        <input type="number" id="inputValue" min="0" placeholder="ex : 3">
+        <div class="buttons">
+            <input type="button" id="btnAdd" value="Add">
+        </div>
+    </div>
+    <div class="output">
+        <div id="dataList">
+            <!--Buat hasil frekuensi sama kelas-->
+        </div>
+        <div class="histogramContainer">
+            <svg id="svg-bar" xmlns="http://www.w3.org/2000/svg" height='500px' width="800px">
+                <!-- Height of the bar represents the frequency -->
+            </svg>
+        </div>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

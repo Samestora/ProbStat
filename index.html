@@ -8,50 +8,30 @@
 </head>
 
 <body>
-    <header>
-        <img src="./files/logo.png" alt="Logo" class="logo">
-        <h1>Histogram (Data Kategori)</h1>
-    </header>
 
-    <section class="intro">
-        <h2>Definisi Histogram</h2>
-        <hr>
-        <h5>Histogram adalah grafik batang yang menunjukkan distribusi frekuensi data yang telah dikelompokkan ke dalam beberapa kategori atau kelas. 
-            Histogram digunakan untuk menampilkan data kualitatif atau data kategori.</h5>
-    </section>
-
-    <section class="intro">
-        <h2>Komponen Histogram</h2>
-        <hr>
-        <h5><ol>
-            <li>a. Sumbu Horizontal (Sumbu X): Sumbu ini menunjukkan kategori atau kelompok data yang berbeda.</li>
-            <li>b. Sumbu Vertikal (Sumbu Y): Sumbu ini menunjukkan frekuensi atau jumlah observasi dalam setiap kategori.</li>
-            <li>c. Batang atau Balok: Tinggi batang atau balok menunjukkan frekuensi atau jumlah observasi dalam kategori tersebut.</li>
-        </ol></h5>
-    </section>
-
-    <div class="input">
-        <textarea autofocus oninput="validation(this)" id="inputArea" placeholder="Separate with spaces" ></textarea> 
-        <input type="button" id="btn" value="Display">
-    </div>
-    <div class="output">
-        <table id="frequencyTable">
-            <!--Buat hasil frekuensi sama kelas-->
-        </table>
-        <table id="moreinfoTable">
-                <!-- Buat hasil tambahan kayak mean, interval, bla bla bla -->
-        </table>
-        <div class="histogramContainer">
-            <!-- Line -->
-            <!-- Histogram here! -->
-            <svg id="svg-bar" xmlns="http://www.w3.org/2000/svg" height='500px' width="800px">
-                <!-- Height of the bar represents the frequency -->
-                <text>test</text>
-            </svg>
+    <!-- Background Video & Header -->
+    
+        <div class="banner">
+            <video src="./files/bgvid.mp4" type="video/mp4" autoplay muted loop></video>
+        
+        <!-- Header -->
+    
+        <div class="content" id="home"> 
+            <nav>
+                <img src="./files/logo.png" class="logo" alt="Logo" title="halaman depan">
+                <ul class="navbar">
+                    <li>
+                        <a href="#home">Histogram Data Kategori</a>
+                    </li>
+                </ul>
+            </nav>
+     
+            <div class="title">
+                <h1>HISTOGRAM DATA KATEGORI</h1>
+                <p>Serunya belajar Probabilitas dan Statistika</p>
+                <a href="./histogram.html" class="button">Coba Histogram!</a>
+            </div>
+            </div>
         </div>
-    </div>
-</body>
-
-<script src="js/script.js"></script>
-
-</html>
+    </body>
+    </html>
