@@ -8,8 +8,30 @@
 </head>
 
 <body>
+    <header>
+        <img src="./files/logo.png" alt="Logo" class="logo">
+        <h1>Histogram (Data Kategori)</h1>
+    </header>
+
+    <section class="intro">
+        <h2>Definisi Histogram</h2>
+        <hr>
+        <h5>Histogram adalah grafik batang yang menunjukkan distribusi frekuensi data yang telah dikelompokkan ke dalam beberapa kategori atau kelas. 
+            Histogram digunakan untuk menampilkan data kualitatif atau data kategori.</h5>
+    </section>
+
+    <section class="intro">
+        <h2>Komponen Histogram</h2>
+        <hr>
+        <h5><ol>
+            <li>a. Sumbu Horizontal (Sumbu X): Sumbu ini menunjukkan kategori atau kelompok data yang berbeda.</li>
+            <li>b. Sumbu Vertikal (Sumbu Y): Sumbu ini menunjukkan frekuensi atau jumlah observasi dalam setiap kategori.</li>
+            <li>c. Batang atau Balok: Tinggi batang atau balok menunjukkan frekuensi atau jumlah observasi dalam kategori tersebut.</li>
+        </ol></h5>
+    </section>
+
     <div class="input">
-        <textarea autofocus oninput="validation(this)" id="inputArea" placeholder="Separate with spaces"></textarea> 
+        <textarea autofocus oninput="validation(this)" id="inputArea" placeholder="Separate with spaces" ></textarea> 
         <input type="button" id="btn" value="Display">
     </div>
     <div class="output">
@@ -24,6 +46,7 @@
             <!-- Histogram here! -->
             <svg id="svg-bar" xmlns="http://www.w3.org/2000/svg" height='500px' width="800px">
                 <!-- Height of the bar represents the frequency -->
+                <text>test</text>
             </svg>
         </div>
     </div>
