@@ -1,33 +1,59 @@
-/* Header  */
 header {
-    background: linear-gradient(to right, #161616, #07295f);
-    padding: 15px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 4px solid rgb(255, 255, 255);
+    border: 4px solid rgba(231, 232, 232, 0.335);
+    position: relative;
+    overflow: hidden;
 }
 
-h1 {
-    color: rgba(255, 255, 255, 0.889);
-    margin: 0;
+.latar {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
 
 .logo {
     height: 90px;
 }
 
+h1 {
+    color: rgba(231, 232, 232, 0.627);
+    margin: 0;
+    margin-left: auto; /* Pindahkan h1 ke sisi paling kanan */
+}
+
 /* Body */
 body {
     background: linear-gradient(to right, #161616,  #07295f);
 }
-#mainContainer{
-    margin: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+#mainContainer {
+    background-color: #00000089;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 30px auto 20px; /* margin atas, horizontal (kiri & kanan), bawah */
+    text-align: center;
+    width: 60%;
 }
+
 #outputArea{
     display: flex;
     align-items: center;
@@ -90,10 +116,13 @@ body {
 /* Penjelasan */
 
 .intro {
+    background-color: #00000089;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 30px auto 20px; /* margin atas, horizontal (kiri & kanan), bawah */
     text-align: center;
-    margin-top: 20px;
-    position: relative;
-    margin-top: 30px; 
+    width: 60%;
 }
 
 .intro h2 {
@@ -101,7 +130,7 @@ body {
     margin-bottom: 10px;
     color: #b1acac; /* Warna putih */
     text-align: left;
-    width: 60%;
+    width: 70%;
     margin: 0 auto 10px auto; /* Membuat h2 berada di tengah dan memiliki margin bawah */
     padding-left: 0; /* Menghapus padding kiri */
 }
@@ -111,13 +140,13 @@ body {
     height: 2px;
     background: linear-gradient(to right, #07295f, #b1acac); /* Warna garis */
     margin: 10px auto;
-    width: 60%;
+    width: 70%;
 }
 
 .intro h5 {
     font-size: 1em;
     color: #b1acac;
-    width: 60%;
+    width: 70%;
     margin: 0 auto; /* Membuat margin otomatis untuk membuat h5 berada di tengah */
     text-align: left; /* Jika teks di dalam h5 ingin disejajarkan ke kiri */
     line-height: 1.5; 
@@ -159,16 +188,13 @@ body {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(1, 0, 5, 0.3),rgba(4, 1, 17, 0.3));
-
-
-
 }
 
 nav{
     width: 100%;
     position: fixed;
     background-color:rgb(13, 13, 93);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+    box-shadow: 5px 5px 30px rgba(108, 107, 107, 0.459);
     display: flex;
     align-items: center;
     justify-content: space-between;
