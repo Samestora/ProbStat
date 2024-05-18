@@ -43,7 +43,6 @@ h1 {
 body {
     background: linear-gradient(to right, #161616,  #07295f);
 }
-
 @keyframes slide-up {
     from {
         transform: translateY(50px);
@@ -176,7 +175,6 @@ body {
     line-height: 1.5;
     text-indent: 2em;
   }
-
 
 
 /*percobaan*/
