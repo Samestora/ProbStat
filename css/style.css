@@ -7,7 +7,6 @@ header {
     position: relative;
     overflow: hidden;
 }
-
 .latar {
     background-size: cover;
     background-position: center;
@@ -54,9 +53,20 @@ body {
     }
 }
 
-#mainContainer, .intro {
+#mainContainer{
     background-color: #00000089;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 30px auto 20px; /* margin atas, horizontal (kiri & kanan), bawah */
+    width: 60%;
+    animation: slide-up 0.5s ease-in-out;
+}
+.intro {
+    background-color: #00000089;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     margin: 30px auto 20px; /* margin atas, horizontal (kiri & kanan), bawah */
@@ -64,18 +74,15 @@ body {
     width: 60%;
     animation: slide-up 0.5s ease-in-out;
 }
-
-#outputArea{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 /* Input Area */
 #inputArea{
     color: #ceeef5;
     padding-top: 50px;
     padding-bottom: 100px;
+    text-align: center;
+}
+#lgnd{
+
 }
 #btnAdd  {
     color: rgb(0, 0, 0);
@@ -98,12 +105,15 @@ body {
 }
 
 #lgnd{
-    width:200px;
-    height:200px;
-    display:inline-block;
+    width:auto;
+    height:auto;
+    display:flex;
+    flex-direction: column;
     left:515px;
-    position:absolute;
     color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
 }
 .lbl{
     width:10px;
