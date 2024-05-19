@@ -41,7 +41,7 @@ const renderChart = () => {
         bar.classList.add("bar");
         chart.appendChild(bar);
 
-        currX = currX + barWidth + 10;
+        currX = currX + barWidth;
         lgndStuff += `
         <li>
             <div class='lbl' style='background:hsl(${currHue}, 100%, 40%)'>
